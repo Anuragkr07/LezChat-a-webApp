@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LezChat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <style>
+        body {
+          background-image: url('icons/download.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+
+
+<!--Fontawesome Scripts-->
+<link rel="icon" href="/icons/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+
+  <!--Bootstrap Scripts-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+
+    <main>
+<div>
+    <br><br><br><br>
+</div>
+
+        <header>
+            <div class="title" >
+                <img src="icons/logo.png" width="35px"alt="icon">
+                <h1>LezChat</h1>
+            </div>
+            <button type="button" onclick="show_hide()">
+                <img src="icons/hamburger.jpg" width="50px">
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count"></h4>
+                </div>
+                <div class="users-list">
+                    
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    
+                   
+                </div>
+                <div class="user-input">
+                    <input id="user-msg" type="text" placeholder="Type message">
+                    <button class="btn" type="button" id="user-send"><i class="fas fa-paper-plane"></i>Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <br><br>
+            <footer>Copyright Anurag @2022</footer>
+        </div>
+        
+
+
+    </main>
+
+    <script>
+        var uwindow = document.querySelector('.users-window');
+        function show_hide(){
+            if(uwindow.style.display == "block"){
+                uwindow.style.display="none";
+            }
+            else{
+                uwindow.style.display = "block"
+            }
+        }
+    </script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+
+</body>
+</html>
